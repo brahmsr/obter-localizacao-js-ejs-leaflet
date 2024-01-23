@@ -1,0 +1,22 @@
+{
+  "name": "leaflet_obter_localizacao",
+  "version": "1.0.0",
+  "description": "Projeto que busca utilizar o leaflet e demais processos para que busque uma localidade e retorne com um point no mapa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "leaflet",
+    "map",
+    "geolocation"
+  ],
+  "author": "brahmsR",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "leaflet": "^1.9.4"
+  }
+}

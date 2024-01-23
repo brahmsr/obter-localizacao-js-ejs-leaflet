@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/Globe.svg" type="image/x-icon" />
+    <title>Buscador de Posicionamento - EJS, JS, Bootstrap 5</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- jquery -->
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <!-- bootstrap -->
+
+    <!-- leaflet: mapa -->
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <script src="js/leaflet.js"></script>
+    <!-- leaflet: mapa -->
+  </head>
+  <style>
+    #map {
+      width: 100%;
+      height: 50vh;
+    }
+  </style>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar bg-body-tertiary shadow-sm sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/Globe.svg"
+            alt=""
+            width="50"
+            class="d-inline-block align-text-top"
+          />
+          Buscador de Posicionamento - EJS, JS, Bootstrap 5
+        </a>
+      </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- card -->
+    <main>
+      <div class="container">
+        <div class="card mt-5">
+          <div class="card-header">
+            <h5 class="mt-1">Busque pela localização</h5>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="auto-search-wrapper">
+                  <input
+                    type="text"
+                    id="cityInput"
+                    class="form-control mb-3"
+                    autocomplete="off"
+                    placeholder="Digite a cidade"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <select id="stateInput" class="form-select">
+                    <option value="">-- Selecione um estado --</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+              </div>
+              <div class="col-md-1">
+                <input type="text" class="form-control" name="latitude" id="latitude" placeholder="Lat">
+              </div>
+              <div class="col-md-1">
+                <input type="text" class="form-control" name="longitude" id="longitude" placeholder="Long">
+              </div>
+              <div class="col-md-1">
+                <button class="btn btn-primary" onclick="getCoordinates()">
+                  <i class="fa-solid fa-magnifying-glass"></i> Buscar
+                </button>
+              </div>
+            </div>
+            <!-- mapa -->
+            <div id="map"></div>
+            <!-- mapa -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- card -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container text-center fixed-bottom">
+        <div class="row align-items-end">
+          <a
+            class="fw-light"
+            href="https://github.com/brahmsr"
+            target="_blank"
+            rel="noopener noreferrer"
+            >criado por Brahms R</a
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+  </body>
+  <!-- script de inicialização do mapa -->
+  <script src="js/main.js"></script>
+  <!-- script de inicialização do mapa -->
+</html>
